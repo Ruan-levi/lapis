@@ -172,7 +172,7 @@ Apoiar a Secretaria Municipal responsável na **gestão das feiras livres de For
 
 #### Diagrama de casos de uso (visão geral)
 
-O diagrama abaixo usa a notação UML de casos de uso do PlantUML: os atores aparecem fora do limite do sistema e os casos de uso, agrupados por necessidade, dentro dele. Os IDs `CDU-01` a `CDU-29` correspondem às especificações a elaborar; fluxos e relações UML de inclusão ou extensão não estão detalhados.
+O diagrama abaixo usa a notação UML de casos de uso do PlantUML: os atores aparecem fora do limite do sistema e os casos de uso, agrupados por necessidade, dentro dele. Os IDs `CDU-01` a `CDU-34` correspondem às especificações a elaborar; fluxos e relações UML de inclusão ou extensão não estão detalhados.
 
 <img src="diagrama-casos-de-uso.svg" alt="Diagrama de casos de uso">
 
