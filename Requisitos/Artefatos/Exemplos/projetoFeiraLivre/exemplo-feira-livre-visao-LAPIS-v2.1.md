@@ -1,8 +1,6 @@
- 
-
 # Visão da Demanda (VD) — Sistema de Gestão das Feiras Livres de Fortaleza
 
-> **Exemplo didático preenchido conforme o template LAPIS v2.1.** Base documental: [Solicitação da Prefeitura](PropostaFeiraLivre.md) e [VD anterior](exemplo-feira-livre-visao.md). Valores, frequência e demais avaliações herdadas da VD anterior são classificações do exemplo, **não aprovações da Prefeitura**. Fluxos e testes são detalhados em artefatos próprios.
+> **Exemplo didático preenchido conforme o template LAPIS v2.1.** Base documental: [Solicitação da Prefeitura](PropostaFeiraLivre.md), [VD anterior](exemplo-feira-livre-visao.md) e **Código da Cidade de Fortaleza (LC nº 270/2019, com alterações da LC nº 286/2020)**, especialmente arts. 556–565 e 707. O texto legal consultado integra a documentação do exercício; sua vigência consolidada e eventuais regulamentações posteriores devem ser verificadas com a assessoria jurídica municipal. Valores, frequência e demais avaliações herdadas da VD anterior são classificações do exemplo, **não aprovações da Prefeitura**. Fluxos e testes são detalhados em artefatos próprios.
 
 ## Identificação e Histórico
 
@@ -15,34 +13,36 @@
 | Responsável pela elaboração  | Equipe LAPIS (conforme VD original)                                                                        |
 | Responsável pela validação   | A definir pela Prefeitura                                                                                  |
 | Situação do documento         | Em revisão — exemplo didático sem aprovação formal                                                    |
-| Versão e data                  | 1.1 — 12/10/2026 (adaptada ao template LAPIS v2.1)                                                        |
+| Versão e data                  | 1.2 — 12/10/2026 (revisão normativa sobre feiras livres)                                                 |
 
 | Data       | Versão | Descrição da alteração                                                                               | Autor                                                           |
 | ---------- | ------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | 12/04/2026 | 1.0     | Criação inicial, conforme VD anterior                                                                  | Equipe LAPIS                                                    |
 | 12/10/2026 | 1.1     | Reorganização no template LAPIS v2.1; rastreabilidade com solicitação original; lacunas explicitadas | Adaptação assistida por IA — requer revisão da equipe LAPIS |
 
+| 12/10/2026 | 1.2 | Alinhamento normativo com o Código da Cidade; requisitos e pendências legais rastreados por artigo | Adaptação assistida por IA — sujeita à validação jurídica e de negócio |
+
 ## 1. Objetivo
 
-Apoiar a Secretaria Municipal responsável na **gestão das feiras livres de Fortaleza**, mediante registro e acompanhamento de feiras, feirantes, barracas e taxas, oferecendo aos fiscais consulta aos feirantes autorizados e melhorando a organização e o controle administrativo.
+Apoiar a Secretaria Municipal responsável na **gestão das feiras livres de Fortaleza**, mediante registro e acompanhamento de feiras, feirantes, barracas e taxas, oferecendo aos fiscais consulta aos feirantes autorizados e melhorando a organização e o controle administrativo e apoiando a verificação das autorizações, da ocupação e das condições de funcionamento previstas nas normas municipais, sem pressupor que o sistema emita atos administrativos.
 
 ## 2. Contexto, Problema e Descrição Sumária da Demanda
 
 - **Situação atual:** o controle de feirantes, a organização das barracas, as autorizações e o pagamento de taxas são feitos manualmente ou por planilhas, conforme a solicitação da Prefeitura.
 - **Problema ou oportunidade:** essas práticas dificultam o controle administrativo e a fiscalização e motivam a modernização da gestão das feiras.
 - **Públicos afetados e impactos:** Secretaria Municipal (gestão), fiscais (consulta e fiscalização) e feirantes (cadastros e consulta da própria situação de pagamento e emissão de guias).
-- **Evidências disponíveis:** [PropostaFeiraLivre.md](PropostaFeiraLivre.md), contexto e itens 1 a 18; [VD original](exemplo-feira-livre-visao.md), catálogo e representações. Não foram fornecidas métricas da situação atual.
-- **Descrição sumária da demanda:** solução acessível em navegadores web modernos para manter cadastros de feirantes, registrar feiras e barracas, controlar pagamentos de taxas, permitir que o feirante consulte sua situação e emita guias, emitir relatórios mensais de arrecadação, permitir a consulta fiscal e controlar o acesso conforme as funções autorizadas e o histórico de alterações. O processamento de pagamento eletrônico não está confirmado.
+- **Evidências disponíveis:** [PropostaFeiraLivre.md](PropostaFeiraLivre.md), contexto e itens 1 a 18; [VD original](exemplo-feira-livre-visao.md), catálogo e representações. Não foram fornecidas métricas da situação atual. **Base legal:** Código da Cidade (LC 270/2019, alterada pela LC 286/2020), arts. 556–565 e, em contextos específicos de adoção de espaços, art. 707.
+- **Descrição sumária da demanda:** solução acessível em navegadores web modernos para manter cadastros de feirantes, registrar feiras e barracas, controlar pagamentos de taxas, permitir que o feirante consulte sua situação e emita guias, emitir relatórios mensais de arrecadação, permitir a consulta fiscal e controlar o acesso conforme as funções autorizadas e o histórico de alterações. O processamento de pagamento eletrônico não está confirmado. O código municipal exige cadastro prévio do feirante e autorização para a atividade, além de disciplinar identificação, localização e organização das bancas; a automação dessas rotinas dependerá de decisão de escopo.
 
 ## 3. Proposta de Valor e Sucesso da Demanda
 
-| Benefício esperado                                | Indicador ou evidência                                                                                  | Resultado desejado                                                                                | Como e quando avaliar                                                                                               |
-| -------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Melhorar o controle dos feirantes e barracas       | Disponibilidade e consistência dos registros por feira<br />Percentual de feiras cadastradas no sistema | Cadastro e vinculação de barracas utilizáveis pela Secretaria                                  | Conferência com representantes da Secretaria na homologação; Cadastro de 90% das feiras existentes em Fortaleza. |
-| Facilitar a fiscalização                         | Consulta aos feirantes autorizados por feira                                                             | Fiscais conseguem consultar os registros necessários                                             | Validação funcional com fiscais; critérios detalhados no respectivo CDU                                          |
-| Apoiar a gestão de taxas                          | Registro de pagamentos e relatórios mensais de arrecadação                                            | Secretaria obtém relatórios mensais por feira                                                   | Verificação com dados de teste e avaliação pelo setor responsável                                              |
-| Facilitar o acompanhamento das taxas pelo feirante | Consulta da situação de pagamento e emissão de guias                                                  | Feirante consegue consultar suas próprias informações e emitir guias                           | Validação com feirantes após a entrega; forma de emissão e integração a detalhar                              |
-| Melhorar a rastreabilidade administrativa          | Histórico de alterações dos cadastros                                                                 | Alterações nos cadastros de feirantes podem ser consultadas/auditadas conforme regras a definir | Revisão das evidências de histórico durante homologação                                                        |
+| Benefício esperado                                | Indicador ou evidência                                                                                  | Resultado desejado                                                                                | Como e quando avaliar                                                                                                                                   |
+| -------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Melhorar o controle dos feirantes e barracas       | Disponibilidade e consistência dos registros por feira<br />Percentual de feiras cadastradas no sistema | Cadastro e vinculação de barracas utilizáveis pela Secretaria                                  | Conferência com representantes da Secretaria na homologação; Meta quantitativa a definir com a Secretaria (não consta da solicitação nem da lei). |
+| Facilitar a fiscalização                         | Consulta aos feirantes autorizados por feira                                                             | Fiscais conseguem consultar os registros necessários                                             | Validação funcional com fiscais; critérios detalhados no respectivo CDU                                                                              |
+| Apoiar a gestão de taxas                          | Registro de pagamentos e relatórios mensais de arrecadação                                            | Secretaria obtém relatórios mensais por feira                                                   | Verificação com dados de teste e avaliação pelo setor responsável                                                                                  |
+| Facilitar o acompanhamento das taxas pelo feirante | Consulta da situação de pagamento e emissão de guias                                                  | Feirante consegue consultar suas próprias informações e emitir guias                           | Validação com feirantes após a entrega; forma de emissão e integração a detalhar                                                                  |
+| Melhorar a rastreabilidade administrativa          | Histórico de alterações dos cadastros                                                                 | Alterações nos cadastros de feirantes podem ser consultadas/auditadas conforme regras a definir | Revisão das evidências de histórico durante homologação                                                                                            |
 
 > As metas numéricas de benefício e a linha de base **não constam dos documentos de origem**; precisam ser levantadas. O limite de três segundos é condição de qualidade, não meta de benefício.
 
@@ -77,6 +77,7 @@ Apoiar a Secretaria Municipal responsável na **gestão das feiras livres de For
 - Consulta, pelos fiscais, dos feirantes autorizados para uma feira.
 - Autenticação para funcionalidades administrativas e para acesso do feirante às próprias informações financeiras; histórico de alterações nos cadastros dos feirantes.
 - Atendimento às condições de uso via navegador, desempenho, base de dados e conformidade descritas na seção 9.
+- **Candidato a adequação legal (não aprovado como nova funcionalidade):** registrar referências a autorizações e respectivas situações, localização e numeração de bancas e informações úteis à fiscalização da ocupação, observados os arts. 561–565. A inclusão e os critérios serão decididos pela Secretaria na elicitação complementar.
 
 ### 6.2. Fora do escopo
 
@@ -163,6 +164,8 @@ Apoiar a Secretaria Municipal responsável na **gestão das feiras livres de For
 
 ## 9. Condições Gerais da Demanda
 
+**Nota normativa:** as condições abaixo foram extraídas do Código da Cidade anexado, que apresenta a LC 270/2019 com alterações da LC 286/2020. A indicação de artigo permite auditoria do requisito; para implantação real, confirmar texto consolidado vigente, legislação especial e regulamentação municipal aplicável. Não tratar trechos marcados **VETADO** como obrigações.
+
 | Tipo                 | Condição e impacto na demanda                                                  | Responsável ou fonte | Referência, se houver                                |
 | -------------------- | -------------------------------------------------------------------------------- | --------------------- | ----------------------------------------------------- |
 | Qualidade            | Operar em navegadores web modernos                                               | Prefeitura            | PF-01 item 7; especificação detalhada a elaborar    |
@@ -175,6 +178,23 @@ Apoiar a Secretaria Municipal responsável na **gestão das feiras livres de For
 | Regra geral          | Feiras ocorrem nos dias/horários definidos pela Secretaria                      | Prefeitura            | PF-01 item 17; detalhamento a elaborar                |
 | Restrição legal    | Atender à legislação municipal aplicável às feiras livres                   | Prefeitura            | PF-01 item 18; atos específicos a identificar        |
 | Prazo                | Desenvolvimento estimado em até seis meses após contratação                  | Prefeitura            | PF-01 item 12; validação no planejamento            |
+
+### 9.1. Condições legais específicas relacionadas às feiras livres
+
+| ID    | Tipo                     | Condição geral e repercussão para requisitos                                                                                                                                                          | Base legal                            | Situação de especificação                              |
+| ----- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------- |
+| RL-01 | Regra legal              | Exercício de atividade na feira exige autorização e cadastro prévio do feirante junto ao órgão competente.                                                                                         | Art. 563                              | Dados e validação operacional a definir                  |
+| RL-02 | Regra legal              | Localização, fiscalização, redimensionamento e autorização de funcionamento/localização da feira são atribuições do órgão competente.                                                       | Arts. 561–562                        | Autoridade, decisões e fluxos a confirmar                 |
+| RL-03 | Regra legal              | Bancas devem ser padronizadas e numeradas; alocação observa critérios de prioridade e agrupamento por classes de mercadorias.                                                                         | Art. 564                              | Política de ocupação e identificação a detalhar       |
+| RL-04 | Regra legal              | Feirante não deve ocupar local de banca diverso daquele concedido e deve portar cartão de identificação fornecido pelo órgão competente.                                                           | Art. 565, VII e IX                    | Consulta fiscal e registros de ocupação a detalhar       |
+| RL-05 | Regra legal              | Higiene, descarte de resíduos, balanças aferidas e não contato de gêneros alimentícios com o solo são obrigações de exercício da atividade; não pressupõem controle automático pelo sistema. | Art. 565, II–V e VIII                | Avaliar suporte digital à fiscalização                  |
+| RL-06 | Regra legal              | Feira é transitória e de comercialização exclusivamente varejista; produtos e serviços conforme norma regulamentadora municipal.                                                                    | Art. 560                              | Norma complementar a localizar                             |
+| RL-07 | Regra legal condicionada | Nos eventos em logradouros públicos com presença de feiras de qualquer natureza, há previsão de 10% dos ocupantes para artesãos cadastrados.                                                        | Art. 560, parágrafo único           | Aplicabilidade concreta e cálculo a validar               |
+| RL-08 | Informação requerida   | Solicitação de comercialização ou exposição deve identificar vendedor/expositor, locais, período/horário e produtos.                                                                             | Art. 558                              | Enquadramento jurídico e campos do processo a confirmar   |
+| RL-09 | Regra contextual         | Em espaços objeto de adoção com implantação de feiras, a licença de funcionamento/localização é obrigatória, com observância das condições ambientais.                                      | Art. 707; art. 706, parágrafo único | Aplicável somente se o cenário se enquadrar nesse regime |
+| RL-10 | Distinção normativa    | Arts. 557 e 559 e respectivos dispositivos vetados**não** criam exigências de implementação.                                                                                                   | Texto do Código da Cidade            | Não aplicável como requisito                             |
+
+> A regra de **uma barraca por feirante em cada feira** (`PF-01`, item 15) é uma condição da solicitação do projeto, **não foi atribuída aos arts. 556–565**. Os valores das taxas (`PF-01`, item 16) dependem de norma tributária específica ainda não identificada.
 
 ## 10. Riscos e Questões em Aberto
 
@@ -190,17 +210,29 @@ Apoiar a Secretaria Municipal responsável na **gestão das feiras livres de For
 | PQ-08 | Premissa a confirmar | Servidores da Prefeitura são adequados ao sistema?                                                      | Risco de implantação                       | Avaliar ambiente disponível                                   | TI da Prefeitura — a definir       | Aberto     |
 | PQ-09 | Dúvida              | Há necessidade de trilha de auditoria além de histórico de alterações cadastrais?                   | Aumento de escopo e requisitos de segurança | Definir abrangência do histórico                             | Secretaria — a definir             | Aberto     |
 
+### 10.1. Pendências normativas complementares
+
+| ID     | Questão                                                                                                                 | Ação e responsável proposto                                              | Situação |
+| ------ | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- | ---------- |
+| PQ-L01 | Qual é o órgão competente e o procedimento efetivo de emissão/renovação de autorizações para cada tipo de feira? | Secretaria e jurídico: confirmar competência e normas complementares      | Aberto     |
+| PQ-L02 | Quais dados de autorização, identificação e bancas devem ser registrados ou consultados pelo sistema?                | Secretaria e fiscais: validar campo a campo nas especificações            | Aberto     |
+| PQ-L03 | A regra de 10% de artesãos aplica-se às feiras e eventos abrangidos neste projeto?                                     | Jurídico: examinar enquadramento e metodologia de ocupação               | Aberto     |
+| PQ-L04 | Como são fiscalizadas qualidade dos produtos, higiene e condições sanitárias e qual apoio digital é necessário?    | Fiscalização: delimitar escopo                                            | Aberto     |
+| PQ-L05 | Qual norma define efetivamente os valores de taxas, os procedimentos de licença e os dias/horários de cada feira?      | Jurídico, arrecadação e Secretaria: identificar atos e versões vigentes | Aberto     |
+| PQ-L06 | Há alterações normativas posteriores à edição de 2020 do Código da Cidade que modifiquem os artigos utilizados?   | Jurídico: conferir texto oficial consolidado na data de homologação      | Aberto     |
+
 ## 11. Documentos Relacionados
 
-| Documento                               | Conteúdo sob sua responsabilidade                                    | Referência e situação                                                                                              |
-| --------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Solicitação original da Prefeitura    | Problema e 18 condições da demanda                                  | [PropostaFeiraLivre.md](PropostaFeiraLivre.md) — fonte fornecida                                                      |
-| VD original do exemplo                  | Descrições, classificações e diagramas históricos                | [exemplo-feira-livre-visao.md](exemplo-feira-livre-visao.md) — versão anterior                                       |
-| Glossário Feira Livre                  | Definições de feirante, barraca e outros termos                     | [glossario-feira-livre.md](glossario-feira-livre.md) — referido na VD antiga; conteúdo não conferido nesta revisão |
-| Regras de negócio compartilhadas       | Licença, limite de barracas, taxas e dias/horários                  | A elaborar; origem PF-01 itens 14–17                                                                                 |
-| Requisitos de qualidade                 | Navegadores, tempo de resposta e demais critérios verificáveis      | A elaborar; origem PF-01 itens 7–8                                                                                   |
-| Especificações dos casos de uso       | Fluxos, exceções, regras e critérios de aceitação de F-01 a F-23 | CDU-01 a CDU-23 — a elaborar/associar a existentes após levantamento                                                |
-| Arquitetura e contratos de integração | Validar a necessidade de integração e escolhas técnicas            | A definir; diagramas históricos não configuram aprovação                                                          |
+| Documento                               | Conteúdo sob sua responsabilidade                                              | Referência e situação                                                                                                                       |
+| --------------------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Código da Cidade de Fortaleza          | Arts. 556–565 e 707; distinção entre norma legal e especificação funcional | [LC 270/2019, alterada pela LC 286/2020](lei_complementar_n_286_de_06_de_janeiro_de_2020.pdf) — documento fornecido; verificar vigência atual |
+| Solicitação original da Prefeitura    | Problema e 18 condições da demanda                                            | [PropostaFeiraLivre.md](PropostaFeiraLivre.md) — fonte fornecida                                                                               |
+| VD original do exemplo                  | Descrições, classificações e diagramas históricos                          | [exemplo-feira-livre-visao.md](exemplo-feira-livre-visao.md) — versão anterior                                                                |
+| Glossário Feira Livre                  | Definições de feirante, barraca e outros termos                               | [glossario-feira-livre.md](glossario-feira-livre.md) — referido na VD antiga; conteúdo não conferido nesta revisão                          |
+| Regras de negócio compartilhadas       | Licença, limite de barracas, taxas e dias/horários                            | A elaborar; origem PF-01 itens 14–17                                                                                                          |
+| Requisitos de qualidade                 | Navegadores, tempo de resposta e demais critérios verificáveis                | A elaborar; origem PF-01 itens 7–8                                                                                                            |
+| Especificações dos casos de uso       | Fluxos, exceções, regras e critérios de aceitação de F-01 a F-23           | CDU-01 a CDU-23 — a elaborar/associar a existentes após levantamento                                                                         |
+| Arquitetura e contratos de integração | Validar a necessidade de integração e escolhas técnicas                      | A definir; diagramas históricos não configuram aprovação                                                                                   |
 
 ## 12. Validação da Visão
 
@@ -219,6 +251,9 @@ Apoiar a Secretaria Municipal responsável na **gestão das feiras livres de For
 - [X] Diagramas técnicos foram retirados do corpo da VD e mantidos como referências históricas.
 - [X] Premissas, restrições, regras gerais e dúvidas estão registradas.
 - [X] Detalhes técnicos e comportamentais estão indicados em artefatos separados.
+- [X] Referências aos artigos legais foram registradas sem converter automaticamente obrigações em funcionalidades aprovadas.
+- [ ] Aplicabilidade das normas complementares e texto consolidado vigente foram validados pelo jurídico municipal.
+- [ ] Necessidades normativas complementares (`NEC-L01` a `NEC-L07`) foram priorizadas e vinculadas a CDUs, quando aplicável.
 - [ ] Revisão e validação humanas foram realizadas.
 
 ### 12.2. Critérios de conclusão e encaminhamento
@@ -227,6 +262,6 @@ Apoiar a Secretaria Municipal responsável na **gestão das feiras livres de For
 
 ### 12.3. Registro da validação
 
-| Versão | Responsável e papel                     | Data      | Condição da VD           | Resultado e ressalvas                                                           |
-| ------- | ---------------------------------------- | --------- | -------------------------- | ------------------------------------------------------------------------------- |
-| 1.1     | A definir — representante da Prefeitura | A definir | Em revisão; não validada | Confirmar escopo adicional, prioridades, metas e responsáveis — PQ-01 a PQ-09 |
+| Versão | Responsável e papel                     | Data      | Condição da VD           | Resultado e ressalvas                                                                        |
+| ------- | ---------------------------------------- | --------- | -------------------------- | -------------------------------------------------------------------------------------------- |
+| 1.2     | A definir — representante da Prefeitura | A definir | Em revisão; não validada | Confirmar escopo, prioridades, metas, responsáveis e pendências normativas PQ-L01 a PQ-L06 |
