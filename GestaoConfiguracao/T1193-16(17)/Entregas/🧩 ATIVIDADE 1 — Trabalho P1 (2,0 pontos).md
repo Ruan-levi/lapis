@@ -45,7 +45,7 @@ Com base nisso, deverão executar as issues relacionadas à:
 ### 📎 Entrega no AVA
 
 * 🔗 Link do repositório no GitHub
-* 📸 Evidência de que o usuário **marcelobezerra-dotco** foi adicionado (print ou confirmação)
+* 📸 Evidência de que o usuário **marcelobezerra-dotcom** foi adicionado (print ou confirmação)
 
 ---
 
